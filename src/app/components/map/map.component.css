@@ -1,0 +1,14 @@
+.child {
+  height: 30px;
+  width: 50px;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+.parent{
+  left: 40%;
+}
+h3{
+  font-size: 14;
+}
+p{
+  font-size: 12;
+}

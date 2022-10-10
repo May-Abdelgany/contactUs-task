@@ -1,0 +1,13 @@
+/* You ,can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root {
+  --mainColor: rgb(18, 18, 60);
+  --secondColor: white;
+  --btn1: rgb(57, 57, 92);
+  --btn2: rgb(243, 110, 50);
+}
+
+* {
+  font-family: 'Tajawal', sans-serif;
+}

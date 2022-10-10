@@ -1,0 +1,27 @@
+nav {
+  background-color: var(--mainColor);
+}
+
+a, .btn {
+  color: var(--secondColor);
+}
+a{
+  font-weight: 400;
+}
+a:hover {
+  color: aqua;
+}
+
+.btn1 {
+  background-color: var(--btn1);
+}
+
+.btn2 {
+  background-color: var(--btn2);
+}
+.btn{
+  font-weight: 600;
+}
+.btn:hover {
+  color: black;
+}

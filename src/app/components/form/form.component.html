@@ -1,0 +1,35 @@
+<div class="my-2" dir="rtl">
+  <form class="px-4 pt-2" [formGroup]="contactUs" (ngSubmit)="send(contactUs)">
+    <div class="alert alert-success" *ngIf="message">
+      <p class="text-center fs-4 fw-bold" >{{message}}</p>
+    </div>
+    <div class="mb-5">
+      <input type="text" class="form-control" placeholder="الاسم كاملا *" formControlName="name">
+      <div class="mt-2 text-danger" *ngIf="contactUs.controls['name'].touched">
+        <p class="text-danger ps-3"
+          *ngIf="contactUs.controls['name'].hasError('required')||contactUs.controls['name'].hasError('pattern')">
+          يجب ادخال الاسم ثلاثي</p>
+      </div>
+    </div>
+    <div class="mb-5">
+      <input type="email" class="form-control" placeholder="البريد الالكتروني *" formControlName="email">
+      <div class="mt-2 text-danger" *ngIf="contactUs.controls['email'].touched">
+        <p class="text-danger ps-3" *ngIf="contactUs.controls['email'].hasError('required')">يجب ادخال البريد الالكتروني
+        </p>
+        <p class="text-danger ps-3" *ngIf="contactUs.controls['email'].hasError('email')">يجب ادخال البريد الالكتروني
+          بشكل صحيح</p>
+      </div>
+    </div>
+    <div class="mb-4">
+      <textarea rows="7" class="form-control" placeholder="الرساله" formControlName="message"></textarea>
+      <div class="mt-2 text-danger" *ngIf="contactUs.controls['message'].touched">
+        <p class="text-danger ps-3" *ngIf="contactUs.controls['message'].hasError('required')">يجب ادخال الرساله
+        </p>
+        <p class="text-danger ps-3" *ngIf="contactUs.controls['message'].hasError('minlength')">يجب ادخال على الاقل 10
+          احرف
+        </p>
+      </div>
+    </div>
+    <button type="submit" class="btn w-100"[disabled]="contactUs.invalid">ارسال</button>
+  </form>
+</div>
